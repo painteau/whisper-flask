@@ -42,7 +42,7 @@ A small Flask API exposing a Whisper (`faster-whisper`) model to transcribe audi
 From the project folder:
 
 ```bash
-docker build -t whisper-flask-transcriber:latest .
+docker build -t ghcr.io/painteau/whisper-flask:latest .
 ```
 
 🚀 Run the container
@@ -51,7 +51,7 @@ docker build -t whisper-flask-transcriber:latest .
 Without authentication:
 
 ```bash
-docker run --rm -p 5632:5632 whisper-flask-transcriber:latest
+docker run --rm -p 5632:5632 ghcr.io/painteau/whisper-flask:latest
 ```
 
 With API key authentication:
@@ -60,7 +60,7 @@ With API key authentication:
 docker run --rm \
   -e API_KEY=my-secret-key \
   -p 5632:5632 \
-  whisper-flask-transcriber:latest
+  ghcr.io/painteau/whisper-flask:latest
 ```
 
 Example with model selection (`large-v3`):
@@ -70,7 +70,7 @@ docker run --rm \
   -e API_KEY=my-secret-key \
   -e WHISPER_MODEL_NAME=large-v3 \
   -p 5632:5632 \
-  whisper-flask-transcriber:latest
+  ghcr.io/painteau/whisper-flask:latest
 ```
 
 🔍 Endpoints
@@ -162,7 +162,7 @@ For example, if your file is on the host at `C:\audios\reel.mp3`, you can mount 
 docker run --rm \
   -v C:/audios:/data \
   -p 5632:5632 \
-  whisper-flask-transcriber:latest
+  ghcr.io/painteau/whisper-flask:latest
 ```
 
 Then call:
