@@ -6,7 +6,7 @@ All notable changes to this project are documented in this file.
 ## 🟢 [0.2.0] - File upload & hardening
 
 - Added `/transcribe-file` endpoint to transcribe audio files uploaded as `multipart/form-data`
-- Restricted uploads to common audio types (`wav`, `mp3`, `m4a`, `flac`, `ogg`, `webm`)
+- Restricted uploads to common audio/video types (`wav`, `mp3`, `m4a`, `flac`, `ogg`, `webm`, `mp4`)
 - Introduced configurable maximum upload size via `MAX_UPLOAD_MB`
 - Return `413 Payload Too Large` when request size exceeds the configured limit
 - Improved temporary file handling and cleanup for uploaded audio
@@ -17,7 +17,7 @@ All notable changes to this project are documented in this file.
 - Added Flask API `/transcribe` using `faster-whisper` (`medium` model)
 - Added `/health` endpoint
 - Docker integration with:
-  - Base image `ghcr.io/painteau/python-ffmpeg-flask-gunicorn:latest`
+  - Base image compatible with Python 3.11 (current Dockerfile uses `python:3.11-slim`)
   - Installation of `faster-whisper`
   - Pre-download of the Whisper `medium` model at build time
 - Optional authentication via `API_KEY` environment variable:

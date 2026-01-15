@@ -17,7 +17,7 @@ A small Flask API exposing a Whisper (`faster-whisper`) model to transcribe audi
 ---------------
 
 - Docker installed
-- Access to the registry that hosts the base image `ghcr.io/painteau/python-ffmpeg-flask-gunicorn:latest`
+- Linux host capable of running `linux/amd64` or `linux/arm64` containers
 
 ⚙️ Environment variables
 ------------------------
