@@ -134,7 +134,7 @@ curl -X POST http://localhost:5632/transcribe \
 Transcribes an audio file sent directly in the request (multipart upload).
 
 The request must be `multipart/form-data` with a `file` field.
-Only common audio formats are accepted: `wav`, `mp3`, `m4a`, `flac`, `ogg`, `webm`.
+Only common audio/video formats are accepted: `wav`, `mp3`, `m4a`, `flac`, `ogg`, `webm`, `mp4`.
 
 Example without auth:
 

@@ -33,6 +33,7 @@ ALLOWED_AUDIO_EXTENSIONS = {
     "flac",
     "ogg",
     "webm",
+    "mp4",
 }
 
 allowed_models = {
@@ -129,7 +130,11 @@ def is_allowed_file(file):
     if ext not in ALLOWED_AUDIO_EXTENSIONS:
         return False
     mimetype = file.mimetype or ""
-    if not mimetype.startswith("audio/") and mimetype not in ("video/webm", "application/octet-stream"):
+    if not mimetype.startswith("audio/") and mimetype not in (
+        "video/webm",
+        "video/mp4",
+        "application/octet-stream",
+    ):
         return False
     return True
 
