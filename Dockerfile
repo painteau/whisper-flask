@@ -10,4 +10,4 @@ RUN python -c "from faster_whisper import WhisperModel; WhisperModel('medium', d
 
 COPY app.py .
 
-CMD ["gunicorn", "-b", "0.0.0.0:5632", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5632", "--timeout", "1200", "app:app"]

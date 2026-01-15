@@ -3,6 +3,10 @@
 
 All notable changes to this project are documented in this file.
 
+## 🟢 [0.2.1] - Stability improvements
+
+- Increased Gunicorn worker timeout to 1200 seconds (20 minutes) to prevent timeouts during long audio transcriptions (CPU mode)
+
 ## 🟢 [0.2.0] - File upload & hardening
 
 - Added `/transcribe-file` endpoint to transcribe audio files uploaded as `multipart/form-data`
